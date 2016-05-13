@@ -1,4 +1,4 @@
-# JWPlayer::API::Client
+# JWPlayer::API::Client [![Build Status](https://travis-ci.org/raphi/jwplayer-api-client.svg?branch=master)](https://travis-ci.org/raphi/jwplayer-api-client)
 
 This gem aims to easily sign JWPlayer Platform API URLs according to the documentation: https://developer.jwplayer.com/jw-platform/reference/v1/authentication.html
 It is not intended to actually send the request but simply to generate the correctly signed URL. An example at the end of this documentation is provided though.
