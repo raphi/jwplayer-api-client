@@ -78,9 +78,9 @@ data = {
   date:          Date.new(2002,03,04).to_time.to_i,
   description:   'Yet Another Keynote',
   title:         'Apple Keynote',
-  source_format: :m3u8,
-  source_type:   :url,
-  source_url:    'http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8'
+  sourceformat:  :m3u8,
+  sourcetype:    :url,
+  sourceurl:     'http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8'
 }
 
 # Call JWPlayer /videos/create API https://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/create.html
@@ -88,7 +88,7 @@ jw_client  = JWPlayer::API::Client.new
 signed_url = jw_client.signed_url('videos/create', data)
 response   = Typhoeus.post(signed_url)
 json       = JSON.parse(response.body)
-media_id   = json.dig('media', 'key')
+media_id   = json.dig('video', 'key')
 ```
 
 ## Development
